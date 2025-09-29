@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.google.gms.google.services)
 }
 android {
     namespace = "com.example.notesapptask"
@@ -33,6 +34,9 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -42,6 +46,12 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.firebase.auth)
+    implementation(libs.androidx.credentials)
+    implementation(libs.androidx.credentials.play.services.auth)
+    implementation(libs.googleid)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -54,4 +64,5 @@ dependencies {
     annotationProcessor ("androidx.room:room-compiler:2.8.0")
     implementation("androidx.viewpager2:viewpager2:1.1.0")
     implementation("androidx.fragment:fragment-ktx:1.8.3")
+    implementation ("it.xabaras.android:recyclerview-swipedecorator:1.4")
 }

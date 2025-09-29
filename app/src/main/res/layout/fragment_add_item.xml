@@ -17,7 +17,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginHorizontal="16dp"
             android:hint="Title"
-            android:background="@color/grey_background"
+            android:background="@drawable/all_rounded_corners"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/grey_background"
+            app:boxStrokeWidth="0dp"
+            app:hintTextColor="@color/dark_grey"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxStrokeColor="@android:color/transparent"
             >
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/titleEditText"
@@ -25,6 +31,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textCapSentences"
                 android:singleLine="true"
+                android:fontFamily="@font/manrope_regular"
                 android:maxLines="1"
                 />
 
@@ -42,13 +49,20 @@
             android:layout_marginHorizontal="16dp"
             android:hint="Description"
             android:layout_marginTop="16dp"
-            android:background="@color/grey_background"
+            android:background="@drawable/all_rounded_corners"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/grey_background"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintTextColor="@color/dark_grey"
+            app:boxStrokeColor="@android:color/transparent"
             >
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/descriptionEditText"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
                 android:gravity="top|start"
+                android:fontFamily="@font/manrope_regular"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:overScrollMode="always"/>
@@ -65,6 +79,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:text="Save"
+        android:fontFamily="@font/manrope_semibold"
         android:backgroundTint="@color/blue_color"
         android:layout_marginHorizontal="16dp"
         />

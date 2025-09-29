@@ -1,5 +1,6 @@
 package com.example.notesapptask
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,6 +27,13 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
         val note = notes[position]
         holder.title.text = note.title
         holder.description.text = note.description
+
+        holder.itemView.setOnClickListener {
+            val context = it.context
+            val intent = Intent(context, noteDetailActivity::class.java)
+            intent.putExtra("note", note)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int = notes.size
@@ -33,5 +41,8 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
     fun setNotes(list: List<Note>) {
         this.notes = list
         notifyDataSetChanged()
+    }
+    fun getNoteAt(position: Int): Note {
+        return notes[position]
     }
 }

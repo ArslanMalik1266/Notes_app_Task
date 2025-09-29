@@ -9,6 +9,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.notesapptask.NoteViewModel
 import com.example.notesapptask.R
@@ -60,6 +62,7 @@ class add_item : Fragment() {
                 }
             }
         }
+
 
         return view
     }
